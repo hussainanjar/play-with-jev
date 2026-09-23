@@ -4,7 +4,7 @@ A little arcade with a clever opponent. Play **Heist**, **Chess**, and **Mineswe
 
 **[Play the games →](https://play-with-jev.vercel.app)**
 
-Made by [Hussain Fakhruddin](https://github.com/hussainanjar).
+Made by [Hussain Fakhruddin](https://github.com/hussainanjar) · [@hussainanjar on X](https://x.com/hussainanjar).
 
 ## The games
 

@@ -312,7 +312,12 @@ export default function HomePage() {
         <p>
           Built for a little friendly competition.
           <br />
-          <span>Made by Hussain Fakhruddin.</span>
+          <span>
+            Made by Hussain Fakhruddin ·{" "}
+            <a href="https://x.com/hussainanjar" aria-label="@hussainanjar on X">
+              @hussainanjar
+            </a>
+          </span>
           <br />
           <a className="hub-credits" href="/chess/ATTRIBUTION.md">
             Chess artwork: Cburnett · CC BY-SA 3.0
