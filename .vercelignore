@@ -1,0 +1,9 @@
+.impeccable
+PRODUCT.md
+DESIGN.md
+README.md
+*.test.ts
+*.tsbuildinfo
+AGENTS.md
+CLAUDE.md
+.env.example

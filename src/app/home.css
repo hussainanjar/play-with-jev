@@ -1,0 +1,490 @@
+.hub-shell {
+  min-height: 100vh;
+}
+.hub-topbar,
+.hub-main,
+.hub-footer {
+  max-width: 1160px;
+}
+.hub-nav {
+  display: flex;
+  gap: 29px;
+}
+.hub-nav a,
+.hub-footer > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+}
+.hub-nav a:hover,
+.hub-footer a:hover {
+  color: var(--blue);
+}
+.hub-skip {
+  position: absolute;
+  left: 16px;
+  top: -80px;
+  padding: 14px;
+  background: var(--lime);
+  z-index: 5;
+}
+.hub-skip:focus {
+  top: 15px;
+}
+.hub-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+  padding: 60px 0 48px;
+}
+.hub-eyebrow,
+.hub-section-label,
+.hub-game-tag,
+.hub-preview-note,
+.hub-card-bottom > span,
+.hub-about-note {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+.hub-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.hub-eyebrow > span {
+  width: 7px;
+  height: 7px;
+  background: var(--red);
+  border-radius: 50%;
+}
+.hub-hero h1 {
+  font:
+    700 clamp(64px, 7vw, 94px)/0.91 var(--font-display),
+    sans-serif;
+  letter-spacing: -0.025em;
+}
+.hub-hero h1 > span {
+  color: var(--red);
+}
+.hub-intro {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  max-width: 360px;
+}
+.hub-intro p {
+  font-size: 17px;
+  line-height: 1.6;
+}
+.hub-intro strong {
+  font-weight: 600;
+}
+.hub-mascot {
+  position: relative;
+  flex: 0 0 85px;
+  width: 85px;
+  height: 112px;
+  background: var(--blue);
+  color: var(--lime);
+  transform: rotate(-8deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  font:
+    700 48px/0.82 var(--font-display),
+    sans-serif;
+  border-radius: 44px 44px 10px 10px;
+}
+.hub-mascot i {
+  position: absolute;
+  right: -10px;
+  top: -12px;
+  font: normal 35px/1 var(--font-body);
+  color: var(--red);
+}
+.hub-section-label {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--line);
+  padding: 19px 0;
+  gap: 16px;
+}
+.hub-section-label h2 {
+  font: inherit;
+}
+.hub-section-label > span {
+  color: var(--muted);
+  font-size: 10px;
+}
+.hub-game-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.hub-game {
+  display: block;
+  text-decoration: none;
+  border: 1px solid var(--line);
+  background: #fffdf6;
+  border-radius: 6px;
+  overflow: hidden;
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+.hub-game:hover {
+  border-color: var(--ink);
+  box-shadow: 0 5px 0 var(--ink);
+}
+.hub-preview {
+  height: 304px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: #dce9ef;
+}
+.hub-chess .hub-preview {
+  background: #e4eacb;
+}
+.hub-game-tag {
+  position: absolute;
+  top: 17px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  z-index: 1;
+  font-size: 10px;
+}
+.hub-preview-note {
+  position: absolute;
+  bottom: 14px;
+  right: 19px;
+  font-size: 9px;
+}
+.hub-heist-board {
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  width: 290px;
+  aspect-ratio: 11/9;
+  transform: rotate(-5deg);
+  border: 5px solid var(--ink);
+  background: var(--floor);
+  box-shadow: 9px 10px 0 #153b6515;
+}
+.hub-tile {
+  display: grid;
+  place-items: center;
+  border: 0.5px solid #153b6510;
+  min-width: 0;
+}
+.hub-tile svg {
+  width: 17px;
+  height: 17px;
+  fill: var(--gold);
+  stroke: var(--ink);
+}
+.hub-wall {
+  background: var(--blue);
+  border-color: #ffffff18;
+}
+.hub-player {
+  background: var(--lime);
+  border-radius: 6px;
+}
+.hub-eyes {
+  font-size: 23px;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+.hub-guard {
+  background: var(--red);
+  border-radius: 50%;
+}
+.hub-guard svg {
+  fill: var(--red);
+  stroke: white;
+}
+.hub-chess-board {
+  width: 244px;
+  aspect-ratio: 1;
+  border: 6px solid var(--ink);
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  transform: rotate(6deg);
+  box-shadow: 10px 10px 0 #153b6515;
+}
+.hub-chess-board > span {
+  background: #edf3e5;
+  display: grid;
+  place-items: center;
+  min-width: 0;
+}
+.hub-chess-board > .hub-dark {
+  background: #77979b;
+}
+.hub-chess-board > .hub-last-move {
+  background: var(--lime);
+}
+.hub-chess-board img {
+  width: 95%;
+  height: auto;
+}
+.hub-card-copy {
+  padding: 22px 25px 20px;
+}
+.hub-card-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hub-card-heading h3 {
+  margin: 0;
+  font:
+    700 42px/1 var(--font-display),
+    sans-serif;
+  letter-spacing: -0.02em;
+}
+.hub-play {
+  width: 41px;
+  height: 41px;
+  border-radius: 50%;
+  background: var(--lime);
+  display: grid;
+  place-items: center;
+  transition: transform 0.18s ease;
+}
+.hub-chess .hub-play {
+  background: var(--gold);
+}
+.hub-game:hover .hub-play {
+  transform: rotate(45deg);
+}
+.hub-card-copy > p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-top: 12px;
+  max-width: 370px;
+  color: var(--muted);
+}
+.hub-card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  border-top: 1px solid var(--line);
+  margin-top: 21px;
+  padding-top: 16px;
+}
+.hub-card-bottom > span {
+  font-size: 9px;
+}
+.hub-card-bottom strong {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-weight: 600;
+  font-size: 13px;
+}
+.hub-about {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin: 35px 0;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
+}
+.hub-about-mark {
+  font-size: 41px;
+  color: var(--red);
+}
+.hub-about h2 {
+  font:
+    700 27px/1.2 var(--font-display),
+    sans-serif;
+  margin-bottom: 7px;
+}
+.hub-about p {
+  max-width: 650px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+.hub-about-note {
+  margin-left: auto;
+  flex-shrink: 0;
+  line-height: 1.6;
+  color: var(--muted);
+  font-size: 10px;
+}
+.hub-footer {
+  margin: 0 auto;
+  padding: 0 8px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.hub-footer p {
+  font-size: 13px;
+  line-height: 1.8;
+}
+.hub-footer p > span {
+  color: var(--muted);
+}
+@media (max-width: 1200px) {
+  .hub-topbar,
+  .hub-main,
+  .hub-footer {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  .hub-intro {
+    max-width: 305px;
+    gap: 19px;
+  }
+  .hub-mascot {
+    flex-basis: 65px;
+    width: 65px;
+    height: 94px;
+    font-size: 40px;
+  }
+}
+@media (max-width: 850px) {
+  .hub-hero {
+    align-items: flex-start;
+  }
+  .hub-intro {
+    max-width: 225px;
+    padding-top: 31px;
+  }
+  .hub-mascot {
+    display: none;
+  }
+  .hub-about-note {
+    display: none;
+  }
+  .hub-preview {
+    height: 280px;
+  }
+  .hub-heist-board {
+    width: 245px;
+  }
+  .hub-chess-board {
+    width: 215px;
+  }
+  .hub-card-copy {
+    padding: 20px;
+  }
+  .hub-card-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+@media (max-width: 620px) {
+  .hub-topbar,
+  .hub-main,
+  .hub-footer {
+    margin-left: 16px;
+    margin-right: 16px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .hub-topbar .brand {
+    font-size: 17px;
+  }
+  .hub-nav {
+    gap: 19px;
+  }
+  .hub-nav a {
+    font-size: 12px;
+  }
+  .hub-nav a:last-child span {
+    display: none;
+  }
+  .hub-hero {
+    flex-direction: column;
+    gap: 23px;
+    padding: 35px 0 29px;
+  }
+  .hub-eyebrow {
+    font-size: 9px;
+    margin-bottom: 20px;
+  }
+  .hub-hero h1 {
+    font-size: clamp(56px, 13.6vw, 80px);
+  }
+  .hub-intro {
+    padding: 0;
+    max-width: none;
+  }
+  .hub-intro p {
+    font-size: 15px;
+  }
+  .hub-intro p br {
+    display: none;
+  }
+  .hub-intro p br::after {
+    content: " ";
+  }
+  .hub-intro p {
+    max-width: 340px;
+  }
+  .hub-section-label {
+    font-size: 9px;
+  }
+  .hub-section-label > span {
+    font-size: 8px;
+    letter-spacing: 0.06em;
+  }
+  .hub-game-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+  .hub-preview {
+    height: 290px;
+  }
+  .hub-heist-board {
+    width: 270px;
+  }
+  .hub-chess-board {
+    width: 232px;
+  }
+  .hub-card-bottom {
+    flex-direction: row;
+    align-items: center;
+  }
+  .hub-about {
+    gap: 15px;
+    margin: 25px 0;
+    padding: 10px 0 25px;
+    align-items: flex-start;
+  }
+  .hub-about p {
+    font-size: 14px;
+  }
+  .hub-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hub-game,
+  .hub-play {
+    transition: none;
+  }
+}
+
+.hub-credits {
+  font-size: 11px;
+  color: var(--muted);
+}
