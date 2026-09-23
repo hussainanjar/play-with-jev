@@ -98,4 +98,4 @@ Request throttling is best effort per server instance. It is not a distributed q
 
 ## License and artwork
 
-Application code is licensed under [ISC](LICENSE). Chess piece SVGs by Cburnett and Wikimedia Commons contributors are licensed separately under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/). See [artwork credits](public/chess/ATTRIBUTION.md).
+Application code is licensed under [MIT](LICENSE). Chess piece SVGs by Cburnett and Wikimedia Commons contributors are licensed separately under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/). See [artwork credits](public/chess/ATTRIBUTION.md).

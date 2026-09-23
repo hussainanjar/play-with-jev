@@ -15,7 +15,7 @@
     "type": "git",
     "url": "https://github.com/hussainanjar/play-with-jev.git"
   },
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@fontsource/barlow": "5.3.0",
     "@fontsource/barlow-condensed": "5.3.0",
