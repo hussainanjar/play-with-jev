@@ -1,7 +1,7 @@
 {
   "name": "play-with-jev",
   "version": "1.0.0",
-  "description": "A little arcade: play Heist and Chess against TypeSafe Jev through Vercel AI Gateway.",
+  "description": "A little arcade: play Heist, Chess, and Minesweeper with TypeSafe Jev through Vercel AI Gateway.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

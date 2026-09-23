@@ -8,6 +8,8 @@ import {
   Route,
   Shield,
   CodeXml,
+  Bomb,
+  Flag,
 } from "lucide-react";
 import { BOARD } from "@/lib/game";
 import { REPO_URL } from "@/lib/site";
@@ -101,6 +103,37 @@ function ChessPreview() {
   );
 }
 
+function MinesweeperPreview() {
+  const open: Record<number, number> = {
+    0: 0,
+    1: 0,
+    2: 1,
+    7: 0,
+    8: 1,
+    9: 2,
+    14: 0,
+    15: 1,
+    21: 0,
+    22: 1,
+    28: 1,
+    29: 2,
+    35: 1,
+  };
+  return (
+    <div className="hub-mines-board" aria-hidden="true">
+      {Array.from({ length: 49 }, (_, i) => (
+        <span
+          key={i}
+          className={`${i in open ? "hub-mine-open" : ""} ${i === 16 ? "hub-mine-flag" : ""}`}
+          data-clue={open[i]}
+        >
+          {i === 16 ? <Flag size={17} /> : open[i] || ""}
+        </span>
+      ))}
+    </div>
+  );
+}
+
 export default function HomePage() {
   return (
     <div className="app-shell hub-shell">
@@ -150,7 +183,7 @@ export default function HomePage() {
         <section id="games" className="hub-games" aria-labelledby="games-title">
           <div className="hub-section-label">
             <h2 id="games-title">PICK YOUR CHALLENGE</h2>
-            <span>02 GAMES · NO SIGNUP</span>
+            <span>03 GAMES · NO SIGNUP</span>
           </div>
           <div className="hub-game-grid">
             <Link
@@ -218,6 +251,39 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
+            <Link
+              href="/minesweeper"
+              className="hub-game hub-mines"
+              aria-label="Play Jev Minesweeper — clear the field with optional Jev hints"
+            >
+              <div className="hub-preview">
+                <div className="hub-game-tag">
+                  <Bomb size={14} /> THE SECOND OPINION
+                </div>
+                <MinesweeperPreview />
+                <span className="hub-preview-note">
+                  A LITTLE LOGIC. A LITTLE NERVE.
+                </span>
+              </div>
+              <div className="hub-card-copy">
+                <div className="hub-card-heading">
+                  <h3>MINESWEEPER</h3>
+                  <span className="hub-play">
+                    <ArrowUpRight size={27} />
+                  </span>
+                </div>
+                <p>
+                  Follow the clues. Flag the mines. Ask Jev for a fresh pair of
+                  eyes when things get tricky.
+                </p>
+                <div className="hub-card-bottom">
+                  <span>LOGIC / PUZZLE</span>
+                  <strong>
+                    Clear the field <ArrowRight size={16} />
+                  </strong>
+                </div>
+              </div>
+            </Link>
           </div>
         </section>
         <section className="hub-about" aria-labelledby="about-title">
@@ -225,10 +291,10 @@ export default function HomePage() {
             ↔
           </span>
           <div>
-            <h2 id="about-title">A real decision. Every turn.</h2>
+            <h2 id="about-title">A little human. A little Jev.</h2>
             <p>
-              Jev chooses from the legal moves, and each game lets you peek at
-              its choices. Powered by{" "}
+              Challenge Jev in Heist and Chess, or ask it for a second opinion
+              in Minesweeper. Each game lets you peek at its choices. Powered by{" "}
               <a href="https://vercel.com/ai-gateway/models/jev">
                 TypeSafe Jev
               </a>{" "}

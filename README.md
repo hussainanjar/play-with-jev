@@ -1,6 +1,6 @@
 # Play with Jev
 
-A little arcade with a clever opponent. Play **Heist** and **Chess** against [TypeSafe Jev](https://vercel.com/ai-gateway/models/jev), using Vercel AI Gateway for its decisions.
+A little arcade with a clever opponent. Play **Heist**, **Chess**, and **Minesweeper** with [TypeSafe Jev](https://vercel.com/ai-gateway/models/jev), using Vercel AI Gateway for its decisions.
 
 **[Play the games →](https://play-with-jev.vercel.app)**
 
@@ -13,7 +13,17 @@ Made by [Hussain Fakhruddin](https://github.com/hussainanjar).
 | Jev Heist | Collect three gems and escape in 40 turns while Jev controls the guard. Use dashes and noise decoys to get away.             | [/heist](https://play-with-jev.vercel.app/heist) |
 | Jev Chess | Play either color against Jev, with legal move hints, promotion choices, move history, PGN export, and browser-local resume. | [/chess](https://play-with-jev.vercel.app/chess) |
 
-Both games support keyboard and touch controls, explain their controls in-game, and display Jev's actual choice probabilities. There are no player accounts or public leaderboards.
+All three games support keyboard and touch controls, explain their controls in-game, and display Jev's actual choice probabilities. There are no player accounts or public leaderboards.
+
+### Minesweeper
+
+**[Play Minesweeper →](https://play-with-jev.vercel.app/minesweeper)**
+
+Clear every safe square on Easy (9 × 9, 10 mines) or Tricky (12 × 12, 24 mines). Your first reveal and its neighbors are always mine-free. Empty areas open automatically. Right-click, press F, or use the touch-friendly Flag mode to mark suspected mines. Reveal an open number with the matching number of neighboring flags to open its remaining neighbors; incorrect flags can trigger a mine.
+
+Jev is an optional hint partner. The browser sends only visible numbers, player flags, and hidden-square markers to `POST /api/minesweeper/hint`. Hidden mine locations are never sent to the model. Jev selects a suggested reveal through the same `typesafe-ai/jev` evaluation API; the player decides whether to use it. Choice percentages are not safety probabilities, and a hint can be wrong. Model failures leave the board playable and offer a retry.
+
+The field and timer live in browser memory and reset when you leave or reload the page. There is no leaderboard or signed Minesweeper session. The shared origin checks and per-instance throttling apply to hint requests. Ordinary reveals and flags do not make AI calls.
 
 ## Run locally
 
@@ -65,6 +75,9 @@ Chess automatically ends on threefold repetition and the 50-move rule, as well a
 src/app/page.tsx                 Arcade homepage
 src/app/heist/                   Heist interface
 src/app/chess/                   Chess interface
+src/app/minesweeper/             Minesweeper interface
+src/app/api/minesweeper/hint/     Jev hints from visible clues only
+src/lib/minesweeper.ts           Minesweeper rules and visible board serialization
 src/app/api/start/               Start a Heist session
 src/app/api/turn/                Apply a turn and ask Jev for its guard move
 src/app/api/chess/start/         Start Chess, including Jev's opening as White

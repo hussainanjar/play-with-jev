@@ -29,3 +29,7 @@ User requested a chess game using Jev. Added standard casual chess at `/chess`, 
 ## Arcade homepage — 2026-09-23
 
 The collection is branded Play with Jev at `https://play-with-jev.vercel.app`. The homepage links to Heist at `/heist` and Chess at `/chess`. Both game headers offer an All games link. The source is published under `hussainanjar/play-with-jev` on GitHub. Browsing the homepage makes no model requests.
+
+## Minesweeper addition — 2026-09-23
+
+Minesweeper joins the same arcade and repository at `/minesweeper`. Easy uses 9 × 9 / 10 mines; Tricky uses 12 × 12 / 24 mines. The first reveal excludes mines from its whole neighborhood, empty areas flood open, and players can flag or chord numbered squares. Jev is an optional clue companion: `/api/minesweeper/hint` receives only visible clues and flags, selects a suggested reveal using AI Gateway, and leaves the final choice to the player. No hidden mine layout is sent to Jev. The board remains playable without hints. Runs reset on reload; no persistence or leaderboard is claimed.

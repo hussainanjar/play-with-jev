@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "Play with Jev — Your next friendly rival",
   description:
-    "A little arcade with a clever opponent. Play Heist and Chess against TypeSafe Jev, powered by Vercel AI Gateway. Made by Hussain Fakhruddin.",
+    "A little arcade with a clever opponent. Play Heist, Chess, and Minesweeper with TypeSafe Jev, powered by Vercel AI Gateway. Made by Hussain Fakhruddin.",
 };
 export default function RootLayout({
   children,

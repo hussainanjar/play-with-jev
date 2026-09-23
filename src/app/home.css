@@ -488,3 +488,77 @@
   font-size: 11px;
   color: var(--muted);
 }
+
+/* Three games share the same catalogue and routes. */
+.hub-game-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.hub-game .hub-card-heading h3 {
+  font-size: 36px;
+}
+.hub-game .hub-card-copy {
+  padding: 20px;
+}
+.hub-game .hub-card-bottom {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.hub-game .hub-card-copy > p {
+  min-height: 72px;
+}
+.hub-mines .hub-preview {
+  background: #f0dfc8;
+}
+.hub-mines .hub-play {
+  background: #f3baaa;
+}
+.hub-mines-board {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  width: 225px;
+  aspect-ratio: 1;
+  transform: rotate(-5deg);
+  padding: 8px;
+  background: var(--ink);
+  box-shadow: 8px 9px 0 #153b6515;
+  border-radius: 3px;
+}
+.hub-mines-board > span {
+  background: var(--blue);
+  border-bottom: 2px solid #1744b4;
+  display: grid;
+  place-items: center;
+  font-size: 19px;
+  font-weight: 700;
+  border-radius: 2px;
+}
+.hub-mines-board > .hub-mine-open {
+  background: #eff4f2;
+  border-color: #c9d7dc;
+  color: var(--blue);
+}
+.hub-mines-board > [data-clue="2"] {
+  color: #24674f;
+}
+.hub-mines-board > .hub-mine-flag {
+  background: var(--gold);
+  border-color: #c6972e;
+}
+@media (max-width: 1050px) and (min-width: 621px) {
+  .hub-game-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 620px) {
+  .hub-game-grid {
+    grid-template-columns: 1fr;
+  }
+  .hub-game .hub-card-bottom {
+    flex-direction: row;
+    align-items: center;
+  }
+  .hub-game .hub-card-copy > p {
+    min-height: 0;
+  }
+}

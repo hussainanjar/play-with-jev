@@ -219,3 +219,9 @@ The desktop shell is capped at 960px. Board and 306px control rail sit side by s
 ## Arcade homepage — `/`
 
 The collection inherits the game palette and self-hosted fonts. A large condensed heading introduces Jev, followed by two linked game cards with decorative previews built from the real map geometry and licensed chess artwork. Desktop uses two columns; phones stack the cards. The homepage includes a skip link, visible keyboard focus, reduced-motion support, artwork credits, and the public source link. All new homepage selectors use the `hub-` prefix to avoid altering game layouts.
+
+## Minesweeper surface — `/minesweeper`
+
+The game inherits the paper, ink, blue, red, lime, and gold palette. Hidden squares use blue, flags gold, Jev's suggested square lime, and a detonated mine red. Revealed numbers use color plus numerals. A roving keyboard focus supports arrows, Home/End, native Enter/Space activation, and F for flags. Each square announces its coordinate and visible state. Reveal/Flag controls support touch input. The larger board scrolls horizontally on narrow screens to keep squares usable. The control rail stacks beneath the board on phones. Timer updates are not live announcements; action results and hint status are.
+
+The homepage now displays all three games, with Minesweeper represented by a decorative grid. Copy distinguishes opponent decisions in Chess/Heist from optional hints in Minesweeper.
